@@ -25,9 +25,10 @@ We will be using `npm` and `webpack` for task management.
 ## Built With
 - Webpack
 - PostCSS
+- ExtractTextWebpack plugin
 - Autoprefixer
-- TailwindCSS
 - CleanCSS
+- TailwindCSS
 - minification package
 
 ## Contributing
