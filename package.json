@@ -1,0 +1,31 @@
+{
+  "name": "frontendframe",
+  "version": "1.0.0",
+  "description": "A frontend development scaffolding build",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thinkpyxl/frontendframe.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "postcss",
+    "tailwindcss",
+    "cleancss",
+    "autoprefixer",
+    "webpack"
+  ],
+  "author": "Pyxl - Laura Pinell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thinkpyxl/frontendframe/issues"
+  },
+  "homepage": "https://github.com/thinkpyxl/frontendframe#readme",
+  "devDependencies": {
+    "webpack": "^4.42.0"
+  }
+}
