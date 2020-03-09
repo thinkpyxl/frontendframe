@@ -19,16 +19,16 @@ module.exports = {
   module: {
     rules: [
       {
-      test: /\.css$/,
-      use: [
-        {
-          loader: MiniCssExtractPlugin.loader,
-          options: {
-            hmr: process.env.NODE_ENV === 'development',
-          }
-        },
-        { loader: 'css-loader', options: { importLoaders: 1 } },
-        'postcss-loader'
+        test: /\.css$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              hmr: process.env.NODE_ENV === 'development',
+            }
+          },
+          { loader: 'css-loader', options: { importLoaders: 1 } },
+          'postcss-loader'
         ]
       }
     ]

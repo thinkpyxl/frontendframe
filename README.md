@@ -14,22 +14,19 @@ These instructions will get you a copy of the project up and running on your loc
 ## Tasks
 We will be using `npm` and `webpack` for task management.
 
-- `run` : build
-   - `run:dev` : builds the dev environment
-   - `run:prod` : builds the production environment
-     - this uses auto-prefixer as well as minifies and compresses everything into a neat bundle
-- `watch` : sync current changes with local saves
+- `npm run start` : build or update dist
+- `npm run watch` : update dist on each change
 
 ## Deployment
 
 ## Built With
 - Webpack
+- MiniCssExtract plugin
 - PostCSS
-- ExtractTextWebpack plugin
-- Autoprefixer
+  - Autoprefixer
+  - TailwindCSS
+  - PurgeCss
 - CleanCSS
-- TailwindCSS
-- minification package
 
 ## Contributing
 
