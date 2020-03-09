@@ -4,7 +4,8 @@
   "description": "A frontend development scaffolding build",
   "main": "index.js",
   "scripts": {
-    "start": "npx webpack --config webpack.config.js"
+    "start": "npx webpack --config webpack.config.js",
+    "watch": "npx webpack --config webpack.config.js --watch --info-verbosity verbose"
   },
   "repository": {
     "type": "git",
