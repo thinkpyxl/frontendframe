@@ -4,7 +4,8 @@
   "description": "A frontend development scaffolding build",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "run": "run:**",
+    "run:webpack": "webpack --config webpack.config.js"
   },
   "repository": {
     "type": "git",
