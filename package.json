@@ -4,8 +4,7 @@
   "description": "A frontend development scaffolding build",
   "main": "index.js",
   "scripts": {
-    "run": "run:**",
-    "run:webpack": "webpack --config webpack.config.js"
+    "run": "npx webpack --config webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -27,6 +26,7 @@
   },
   "homepage": "https://github.com/thinkpyxl/frontendframe#readme",
   "devDependencies": {
-    "webpack": "^4.42.0"
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11"
   }
 }
