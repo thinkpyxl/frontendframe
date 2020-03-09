@@ -1,4 +1,6 @@
+/* purgecss start ignore */
 @tailwind base;
+/* purgecss end ignore */
 
 h1 {
   text-transform: uppercase;
@@ -31,4 +33,9 @@ button {
     width: 100px;
     background-image: url(https://source.unsplash.com/100x50);
   }
+}
+
+.notused {
+  content: 'some random bs';
+  color: pink;
 }
