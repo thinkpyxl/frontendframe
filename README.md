@@ -7,27 +7,26 @@ This repo contain the basic frontend scaffolding intended to help quickly set up
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Prerequisites
+- `yarn` is used to for the installation process
 
 ### Installing
 
 ## Tasks
 We will be using `npm` and `webpack` for task management.
 
-- `run` : build
-   - `run:dev` : builds the dev environment
-   - `run:prod` : builds the production environment
-     - this uses auto-prefixer as well as minifies and compresses everything into a neat bundle
-- `watch` : sync current changes with local saves
+- `npm run start` : build or update dist
+- `npm run watch` : update dist on each change
 
 ## Deployment
 
 ## Built With
 - Webpack
+- MiniCssExtract plugin
 - PostCSS
-- Autoprefixer
-- TailwindCSS
+  - Autoprefixer
+  - TailwindCSS
+  - PurgeCss
 - CleanCSS
-- minification package
 
 ## Contributing
 
