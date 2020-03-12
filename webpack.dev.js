@@ -1,4 +1,3 @@
-
 const webpack = require('webpack')
 const path = require('path')
 
@@ -8,14 +7,14 @@ module.exports = {
   mode: 'development',
 
   entry: './src/index.js',
-  
+
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist')
   },
 
   plugins: [new MiniCssExtractPlugin()],
-  
+
   module: {
     rules: [
       {
@@ -24,7 +23,7 @@ module.exports = {
           {
             loader: MiniCssExtractPlugin.loader,
             options: {
-              hmr: process.env.NODE_ENV === 'development',
+              hmr: process.env.NODE_ENV === 'development'
             }
           },
           { loader: 'css-loader', options: { importLoaders: 1 } },
@@ -37,5 +36,4 @@ module.exports = {
   watchOptions: {
     ignored: /node_modules/
   }
-
 }
