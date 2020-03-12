@@ -3,6 +3,10 @@
 /* purgecss end ignore */
 
 body {
+  background-color: black;
+}
+/*
+body {
   @apply bg-white;
 }
 
@@ -25,4 +29,4 @@ footer {
  footer h1, h2, h3, h5, p, a {
    @apply font-body text-white;
  }
-
+*/

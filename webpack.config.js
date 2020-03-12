@@ -1,8 +1,7 @@
-const env = process.env.NODE_ENV;
+const env = process.env.NODE_ENV
 const webpack = require('webpack')
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
@@ -16,10 +15,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
 
-  plugins: [
-    new MiniCssExtractPlugin(),
-    new HtmlWebpackPlugin()
-  ],
+  plugins: [new MiniCssExtractPlugin(), new HtmlWebpackPlugin()],
 
   module: {
     rules: [
@@ -28,33 +24,22 @@ module.exports = {
         use: {
           loader: 'twig-loader',
           options: {
-              // See options section below
-          },
+            // See options section below
+          }
         }
       },
       {
-        test: /\.css$/,
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            // options: {
-            //   hmr: process.env.NODE_ENV === 'development'
-            // }
-          },
-          { loader: 'css-loader', options: { importLoaders: 1 } },
-          'postcss-loader'
-        ]
+        test: /\.css$/i,
+        use: [MiniCssExtractPlugin.loader, 'css-loader']
       }
     ]
   },
 
-
   node: {
-    fs: "empty" // avoids error messages
+    fs: 'empty' // avoids error messages
   },
 
   watchOptions: {
     ignored: /node_modules/
-  },
-
+  }
 }
