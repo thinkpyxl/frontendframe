@@ -1,32 +1,17 @@
+@import-glob "blocks/**/*.css";
+/**
+https://www.meidev.co/blog/visual-studio-code-css-linting-with-tailwind/
+*/
+
 /* purgecss start ignore */
 @tailwind base;
+@tailwind components;
+@tailwind utilities;
 /* purgecss end ignore */
 
 body {
-  background-color: black;
+  /* @apply bg-black; */
 }
-/*
-body {
-  @apply bg-white;
+.redish {
+  color: red;
 }
-
-h1, h2, h3, h4 {
-  @apply font-display text-black
-}
-
-.heroHome article h1{
-   @apply text-tan font-display text-2xl;
- }
-
- header {
-   @apply font-body text-tan;
- }
-
-footer {
-  @apply bg-tan;
-}
-
- footer h1, h2, h3, h5, p, a {
-   @apply font-body text-white;
- }
-*/
