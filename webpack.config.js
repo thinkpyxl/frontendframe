@@ -2,7 +2,6 @@ const env = process.env.NODE_ENV
 const webpack = require('webpack')
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
@@ -14,8 +13,17 @@ module.exports = {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist')
   },
-
-  plugins: [new MiniCssExtractPlugin(), new HtmlWebpackPlugin()],
+  devtool: false,
+  plugins: [
+    new webpack.SourceMapDevToolPlugin({
+      exclude: ['*.twig']
+    }),
+    new MiniCssExtractPlugin(),
+    new HtmlWebpackPlugin({
+      title: 'Outset',
+      inject: '<h1>hi</h1>'
+    })
+  ],
 
   module: {
     rules: [
