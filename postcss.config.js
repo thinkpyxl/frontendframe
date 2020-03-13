@@ -1,7 +1,7 @@
 const postcssPresetEnv = require('postcss-preset-env');
 const purgecss = require('@fullhuman/postcss-purgecss')({
   content: [
-    './*.html',
+    './**/*.twig',
   ],
   defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
 })
