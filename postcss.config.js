@@ -1,3 +1,4 @@
+const postcssPresetEnv = require('postcss-preset-env');
 const purgecss = require('@fullhuman/postcss-purgecss')({
   content: [
     './*.html',
@@ -5,11 +6,20 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
   defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
 })
 
+console.log(process.env.NODE_ENV)
+
 module.exports = {
   map: true,
   plugins: [
+    require('postcss-import-ext-glob'),
+    require('postcss-import'),
     require('tailwindcss'),
     require('autoprefixer'),
-    ...process.env.NODE_ENV === 'development' ? [purgecss] : []
+    postcssPresetEnv({
+      features: {
+        'nesting-rules': true,
+      }
+    }),
+    ...process.env.NODE_ENV === 'development' ? [] : [purgecss]
   ]
 }
