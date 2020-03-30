@@ -1,6 +1,5 @@
 import templateString from './index.twig';
 import './index.css';
-import './blocks/hero/hero'
 
 const wrapperElement = document.createElement('div')
 

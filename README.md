@@ -1,39 +1,46 @@
 # Pyxl FrontEndFrame
 
-This repo contain the basic frontend scaffolding intended to help quickly set up the basic tools you need to get started developing on the front end.
+This repo contains the basic frontend scaffolding intended to assist in quickly setting up the basic tools you need to get started developing a pure front end.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of this scaffolding up and running on your local machine for local development and testing purposes.
 
 ### Prerequisites
 - `yarn` is used to for the installation process
 
-### Installing
+### Installing for Use
+ 1. Click 'Use this template' 
+ 2. Name your repo
+ 3. Clone your new repo down
+ 4. Complete `yarn install` or `yarn`
+ 5. `yarn build`
+ 6. Test with `yarn start`
 
 ## Tasks
-We will be using `npm` and `webpack` for task management.
+We will be using `yarn` and `webpack` for task management.
 
-- `npm run start` : build or update dist
-- `npm run watch` : update dist on each change
+- `yarn build` : build or update dist
+- `yarn start` : update dist on each change and has hot module replacement
+- `yarn plop` : creates directories and associated files under source using atomic structure (atom, molecule, organism, template, page)
+   - you can modify this under `plopfile.js`
 
-## Deployment
-
-## Built With
+## Tooling includes
 - Webpack
-- MiniCssExtract plugin
+   - MiniCssExtract plugin
+   - Copy-Webpack-Plugin
+   - HTML WP Plugin
+   - SVG Sprite HTML Webpack Plugin
 - PostCSS
-  - Autoprefixer
-  - TailwindCSS
-  - PurgeCss
+   - Autoprefixer
+   - TailwindCSS
+   - PurgeCss (installed but not config yet)
 - CleanCSS
 
-## Contributing
-
-## Versioning
-
 ## Authors
-- [Laura Pinell](https://github.com/lapinell) at [Pyxl](https://github.com/thinkpyxl/)
+- [Pyxl](https://github.com/thinkpyxl/)
+   - [Laura Pinell](https://github.com/lapinell)
+   - [Michael Mizner](https://github.com/mizner)
 
 ## License
 

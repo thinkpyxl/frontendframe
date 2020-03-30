@@ -1,8 +1,10 @@
 const env = process.env.NODE_ENV
 const webpack = require('webpack')
 const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const SvgSpriteHtmlWebpackPlugin = require('svg-sprite-html-webpack');
 
 module.exports = {
   mode: env,
@@ -20,13 +22,33 @@ module.exports = {
     }),
     new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Outset',
-      inject: '<h1>hi</h1>'
-    })
+      title: 'ABILITY Network',
+      meta: {
+        'viewport': 'width=device-width, initial-scale=1.0, shrink-to-fit=no'
+      }
+    }),
+    new SvgSpriteHtmlWebpackPlugin({
+      includeFiles: [
+        'src/atoms/icons/*.svg',
+      ],
+    }),
+    new CopyPlugin([
+      {
+        from: '**/*',
+        to: 'assets/',
+        context: 'src/atoms/'
+      } ],
+      { ignore: ['*.twig', '*.js', '*.css'] }
+    )
   ],
 
   module: {
     rules: [
+      {
+        test: /\.svg$/,
+        exclude: /node_modules/,
+        use: SvgSpriteHtmlWebpackPlugin.getLoader(),
+      },
       {
         test: /\.twig$/,
         use: {
