@@ -7,6 +7,9 @@
     "build": "NODE_ENV=development webpack",
     "start": "NODE_ENV=development webpack && webpack-dev-server --content-base=dist/ --inline --watch --hot --open",
     "prod": "NODE_ENV=production webpack",
+    "buildWin": "SET NODE_ENV=development&& webpack",
+    "startWin": "SET NODE_ENV=development&& webpack && webpack-dev-server --content-base=dist/ --inline --watch --hot --open",
+    "prodWin": "SET NODE_ENV=production&& webpack",
     "plop": "plop"
   },
   "repository": {
