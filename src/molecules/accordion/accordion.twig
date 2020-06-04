@@ -1,0 +1,13 @@
+<section class="accordion">
+    {% for tab in accordionContents %}
+        <div class="accordion__tab-container">
+            <button class="accordion__header font-serif w-full px-6 py-4 relative">
+                <span class="accordion__header-chevron absolute transform">&#x25BC;</span>
+                <span class="accordion__header-text">{{ tab.header }}</span>
+            </button>
+            <div class="accordion__contents font-serif accordion__contents--hidden">
+                <p>{{ tab.contents }}</p>
+            </div>
+        </div>
+    {% endfor %}
+</section>
