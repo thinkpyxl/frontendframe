@@ -9,10 +9,13 @@ const SvgSpriteHtmlWebpackPlugin = require('svg-sprite-html-webpack');
 module.exports = {
   mode: env,
 
-  entry: './src/index.js',
-
+  entry: {
+    main: './src/index.js',
+    postscriptBundle: './src/postscript.js',
+  },
+  
   output: {
-    filename: 'main.js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'dist')
   },
   devtool: false,

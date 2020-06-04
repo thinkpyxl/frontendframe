@@ -1,5 +1,5 @@
 @import-glob "atoms/**/*.css";
-/* @import-glob "molecules*.css"; */
+@import-glob "molecules/**/*.css";
 /* @import-glob "organisms*.css"; */
 /**
 https://www.meidev.co/blog/visual-studio-code-css-linting-with-tailwind/
